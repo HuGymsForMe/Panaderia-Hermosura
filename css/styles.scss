@@ -1,0 +1,160 @@
+/*IMPORT ICONOS BOOTSTRAP*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+/*FUENTES*/
+@font-face {
+    font-family: 'LetraPanaderia';
+    src: url(../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+
+/*VARIABLES*/
+$letra_panaderia: 'LetraPanaderia';
+$sombra_cards: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+/*ELEMENTOS GENERALES*/
+*{
+    box-sizing: border-box;
+}
+
+nav, footer{
+    background-color: #383838;
+    color: #fff;
+    padding: 2rem;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+/*BARRA DE NAVEGACIÓN*/
+#IconoPanaderia{
+    font-family: $letra_panaderia;
+}
+
+.enlacesNav{
+    margin: 0 .5rem;
+    &:hover{
+        color: rgb(234, 234, 134) !important;
+        transition: all 300ms linear;
+        transform: scale(1.1, 1.1);
+    }
+}
+
+/*CONTENIDO PRINCIPAL*/
+#carouselExampleIndicators{
+    width: 60%;
+    margin: 2rem auto;
+    margin-top: 10rem;
+}
+
+#PieCarousel{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $letra_panaderia;
+    width: 90%;
+}
+
+/*NUESTROS PRODUCTOS*/
+#NuestrosProductos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    #TituloProductos{
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #383838;
+        align-items: center;
+        margin-bottom: .5rem;
+        margin-top: 2rem;
+        font-family: $letra_panaderia;
+    }
+    #contenidoProductos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content : center;
+        .card{
+            margin: 1rem;
+            box-shadow: $sombra_cards;
+            border: none;
+            border-radius: 5px;
+            &:hover{
+                transform: scale(1.04, 1.04);
+                transition: all 300ms linear;
+            }
+        }
+    }
+}
+
+/*FORMULARIO DE CONTACTO*/
+#Contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    #TituloContacto{
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #383838;
+        align-items: center;
+        margin-bottom: .5rem;
+        margin-top: 2rem;
+        font-family: $letra_panaderia;
+    }
+    #FormularioContacto{
+        box-shadow: $sombra_cards;
+        border-radius: 10px;
+        padding: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        article{
+            label, input, textarea{
+                margin: 1rem;
+                border-radius: 5px;
+            }
+            label{
+                font-family: $letra_panaderia;
+            }
+            input, textarea{
+                padding: .5rem;
+                font-size: 1.3rem;
+                border: 1px solid #ccc;
+            }
+        }
+        #SeccionMensaje{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+/*PIE DE PÁGINA*/
+#ContenidoUbi, #ContenidoContactanos, #ContenidoCopy, #ContenidoTelefono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    #ContenidoBotonesContactanos{
+        flex-direction: row;
+    }
+}
+
+.botonesfooter{
+    background-color: #383838;
+    border-radius: 6px;
+    padding: 1rem;
+    line-height: 10px;
+    color: #fff;
+    &:hover{
+        background-color: rgb(2, 2, 16);
+    }
+}
